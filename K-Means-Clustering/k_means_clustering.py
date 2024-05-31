@@ -112,17 +112,17 @@ def main(img_path, resize=False, feat_dim=3):
     plt.suptitle(f"K-means Clustering {os.path.basename(img_path).split('.')[0]}({feat_dim})")
     # Adjust the space between subplots
     plt.subplots_adjust(hspace=0.5, wspace=0.3)
-    if not os.path.exists('out_img'):
-        os.mkdir('out_img')
-    plt.savefig(f"out_img/{os.path.basename(img_path).split('.')[0]}_{feat_dim}_{time.time()}.svg", bbox_inches='tight')
+    if not os.path.exists('./data/out_img'):
+        os.mkdir('./data/out_img')
+    plt.savefig(f"./data/out_img/{os.path.basename(img_path).split('.')[0]}_{feat_dim}_{time.time()}.svg", bbox_inches='tight')
     plt.show()
 
 
 if __name__ == '__main__':
-    main('ori_img/roommate.jpg', resize=True)
-    main('ori_img/BingxianXie.jpg')
-    main('ori_img/lena.png')
-    main('ori_img/roommate.jpg', resize=True, feat_dim=5)
-    main('ori_img/BingxianXie.jpg', feat_dim=5)
-    main('ori_img/lena.png', feat_dim=5)
+    main('./data/ori_img/roommate.jpg', resize=True)
+    main('./data/ori_img/BingxianXie.jpg')
+    main('./data/ori_img/lena.png')
+    main('./data/ori_img/roommate.jpg', resize=True, feat_dim=5)
+    main('./data/ori_img/BingxianXie.jpg', feat_dim=5)
+    main('./data/ori_img/lena.png', feat_dim=5)
 
