@@ -2,3 +2,7 @@ K-Means-Clustering/data/*
 Genetic-algorithm/data/*
 Genetic-algorithm/log/*
 Genetic-algorithm/test*.py
+ACO/img/*
+ACO/log/*
+ACO/test/*
+ACO/*bp*
